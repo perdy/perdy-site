@@ -1,10 +1,13 @@
-import { Intro } from "../components/intro";
-import { SEO } from "../components/seo";
-import React from "react";
+import { Intro } from 'components/Intro';
+import Layout from 'components/Layout';
+import { SEO } from 'components/SEO';
+import React from 'react';
 
 export default () => (
-  <div>
+  <>
     <SEO />
-    <Intro />
-  </div>
+    <Layout>
+      <Intro />
+    </Layout>
+  </>
 );
