@@ -78,6 +78,14 @@ module.exports = {
         isResettingCSS: true,
         isUsingColorMode: false
       }
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Montserrat', 'Lora', 'Fira Mono', 'Press Start 2P']
+        }
+      }
     }
   ]
 };

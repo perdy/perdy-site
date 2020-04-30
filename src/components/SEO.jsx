@@ -1,4 +1,4 @@
-import Thumbnail from "assets/thumbnail/thumbnail.png";
+import Thumbnail from "assets/images/thumbnail.png";
 import {
   address,
   contact,
