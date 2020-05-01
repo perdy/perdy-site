@@ -1,6 +1,4 @@
 import { css } from '@emotion/core';
-import Flipps from 'assets/fonts/flipps.otf';
-import WildySans from 'assets/fonts/wildy-sans.otf';
 
 const globalStyles = css`
   html {
