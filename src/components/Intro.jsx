@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/core';
 import Portrait from 'assets/images/perdy.png';
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/all';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/all'
 
 export const Intro = () => {
   const theme = useTheme();
@@ -51,7 +51,7 @@ export const Intro = () => {
           href="https://github.com/perdy/"
           variant="outline"
           variantColor="secondary"
-          aria-label="LinkedIn"
+          aria-label="GitHub"
           size="lg"
           fontSize={24}
           icon={FaGithub}
@@ -68,6 +68,19 @@ export const Intro = () => {
           size="lg"
           fontSize={24}
           icon={FaLinkedin}
+          _focus={{ boxShadow: 'none' }}
+          isExternal
+        />
+        <IconButton
+          rounded="full"
+          as={Link}
+          href="mailto:perdy@perdy.io"
+          variant="outline"
+          variantColor="secondary"
+          aria-label="Email"
+          size="lg"
+          fontSize={24}
+          icon={FaEnvelope}
           _focus={{ boxShadow: 'none' }}
           isExternal
         />
