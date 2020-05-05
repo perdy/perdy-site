@@ -1,14 +1,15 @@
 import { CSSReset, ThemeProvider } from '@chakra-ui/core';
 import { Global } from '@emotion/core';
 import Background from 'assets/images/background.jpg';
-import Container from 'components/Container';
+import Section from 'components/Section';
 import { Intro } from 'components/Intro';
+import { Projects } from 'components/Projects';
 import globalStyles from 'global';
 import React from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import theme from 'theme';
 
-const pages = 2;
+const pages = 4;
 
 const Layout = () => {
   const parallax = React.useRef();
@@ -21,13 +22,14 @@ const Layout = () => {
         <ParallaxLayer
           offset={1}
           speed={1}
-          factor={0.5}
-          style={{ backgroundColor: theme.colors.primary['400'] }}
+          factor={1}
+          style={{ backgroundColor: theme.colors.primary['100'] }}
         />
         <ParallaxLayer
-          offset={1.5}
+          offset={2}
           speed={1}
-          style={{ backgroundColor: theme.colors.secondary['200'] }}
+          factor={3}
+          style={{ backgroundColor: theme.colors.secondary['100'] }}
         />
 
         <ParallaxLayer
@@ -41,10 +43,15 @@ const Layout = () => {
             backgroundRepeat: 'repeat'
           }}
         />
-        <ParallaxLayer offset={0.25} speed={1}>
-          <Container>
+        <ParallaxLayer offset={0.25} speed={-0.1}>
+          <Section>
             <Intro />
-          </Container>
+          </Section>
+        </ParallaxLayer>
+        <ParallaxLayer offset={2.25} speed={0.5}>
+          <Section title="Projects">
+            <Projects />
+          </Section>
         </ParallaxLayer>
       </Parallax>
     </ThemeProvider>

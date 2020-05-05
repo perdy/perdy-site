@@ -15,7 +15,7 @@ export const Intro = () => {
   const theme = useTheme();
 
   return (
-    <Stack align="center" spacing={{ xs: 4, md: 12 }} pt={{ xs: 5, md: 20 }}>
+    <Stack align="center" spacing={{ xs: 6, md: 12 }}>
       <Box borderWidth="2px" borderColor="primary.700" rounded="full">
         <Image
           rounded="full"
@@ -24,11 +24,11 @@ export const Intro = () => {
           alt="Perdy"
         />
       </Box>
-      <Box>
+      <Stack spacing={2}>
         <Heading
           as="h1"
           textAlign="center"
-          fontFamily='"Press Start 2P"'
+          fontFamily={theme.fonts.retro}
           fontSize={{ xs: 'md', md: '4xl' }}
           color="primary.700"
         >
@@ -36,7 +36,6 @@ export const Intro = () => {
         </Heading>
         <Heading
           as="h2"
-          pt={2}
           textAlign="center"
           fontStyle="italic"
           fontSize={{ xs: 'md', md: '3xl' }}
@@ -44,18 +43,19 @@ export const Intro = () => {
         >
           Artificial Intelligence Engineer & Software Architect
         </Heading>
-      </Box>
+      </Stack>
       <Stack isInline>
         <IconButton
           rounded="full"
           as={Link}
           href="https://github.com/perdy/"
           variant="outline"
-          variantColor="primary"
+          variantColor="secondary"
           aria-label="LinkedIn"
           size="lg"
           fontSize={24}
           icon={FaGithub}
+          _focus={{ boxShadow: 'none' }}
           isExternal
         />
         <IconButton
@@ -63,11 +63,12 @@ export const Intro = () => {
           as={Link}
           href="https://linkedin.com/in/p3rdy/"
           variant="outline"
-          variantColor="primary"
+          variantColor="secondary"
           aria-label="LinkedIn"
           size="lg"
           fontSize={24}
           icon={FaLinkedin}
+          _focus={{ boxShadow: 'none' }}
           isExternal
         />
       </Stack>
