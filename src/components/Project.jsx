@@ -27,7 +27,7 @@ const Project = ({ name, url, description, stars, forks, language }) => {
         <Stack>
           <Heading
             as="h4"
-            fontSize={{ xs: 'lg', lg: '2xl' }}
+            fontSize={{ xs: 'xl', lg: '2xl' }}
             textTransform="capitalize"
             color="secondary.400"
           >
@@ -39,7 +39,9 @@ const Project = ({ name, url, description, stars, forks, language }) => {
               {name.replace('-', ' ')}
             </Link>
           </Heading>
-          <Text fontSize={{ xs: 'sm', lg: 'lg' }}>{description}</Text>
+          <Text fontSize={{ xs: 'sm', lg: 'lg' }} whiteSpace="pre-wrap">
+            {description}
+          </Text>
         </Stack>
         <Stack pt={4} direction="row" justify="flex-end" spacing={6}>
           <Box>{language}</Box>

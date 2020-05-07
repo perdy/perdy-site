@@ -1,0 +1,189 @@
+education:
+- activities: ''
+  degree-name: Computer Science
+  end-date: '2013'
+  notes: ''
+  school-name: "Universidad de M\xE1laga"
+  start-date: '2006'
+honors:
+- description: 'Speaker at Test Academy Madrid with: "Machine Learning services validation".'
+  issued-on: Nov 2019
+  title: Speaker at Test Academy
+- description: 'Speaker at PyCon ES 2019 with: "High-performant asynchronous APIs".'
+  issued-on: Sep 2019
+  title: Speaker at PyCon ES 2019
+- description: 'Speaker at PyCon ES 2018 with talk: "New generation of APIs".'
+  issued-on: Oct 2018
+  title: Speaker at PyCon ES 2018
+- description: ' Speaker at PyCon ES 2017 edition with talk: "Create, package and
+    distribute your own Python application".'
+  issued-on: Sep 2017
+  title: Speaker at PyCon ES 2017
+- description: Winner of a Machine Learning contest at PyCon ES 2017.
+  issued-on: Sep 2017
+  title: Winner of Machine Learning contest at PyCon ES 2017
+- description: ' Speaker at OpenSouthCode 2017 edition with talk: "Flex schemas with
+    PostgreSQL and Django".'
+  issued-on: May 2017
+  title: Speaker at OpenSouthCode 2017
+- description: "Usual speaker at M\xE1laga Python MeetUp. The majority of talks can\
+    \ be found in https://github.com/perdy/speech/"
+  issued-on: '2016'
+  title: "M\xE1laga Python MeetUp's Speaker"
+positions:
+- company-name: Piksel Inc
+  description: 'As part of the product-oriented side of this company I''m leading,
+    designing and developing projects related to media metadata with a highly-skilled
+    team. We are end-to-end responsible of a group of services designed for gathering,
+    enriching and exposing different kind of media metadata.
+
+
+    Those services are built using modern tech stacks and designed using Big Data
+    and Artificial Intelligence techniques.
+
+
+    We are backed by an data-driven and polyglot architecture built mainly over Python,
+    Java and JavaScript languages; with multiple databases both relational and NoSQL,
+    highly-scalable serverless services based on streaming engines such as Kafka and
+    AWS Kinesis.'
+  finished-on: ''
+  location: "M\xE1laga, Andaluc\xEDa, Espa\xF1a"
+  started-on: Jun 2019
+  title: Software Architect
+- company-name: Whalar
+  description: "Responsible of the whole data ecosystem in the company.\n\n The first\
+    \ objective of that ecosystem is to provide a reliable and constantly updated\
+    \ source of metadata from influencers, enriched with many own-generated metadata\
+    \ such as fraud detectors, followers health evaluators, segmented potential exposition,\
+    \ etc. Those enrichers are based on different Machine Learning techniques.\n\n\
+    \ Our second goal is to use it as a Business Intelligence platform for improving\
+    \ the sales process itself and integrating the feedback of sales campaigns into\
+    \ our data system.\n\nThe system is built following a Kappa architecture using\
+    \ Kafka streams, modern APIs based on REST or GraphQL and Data Warehousing that\
+    \ provides huge efficiency."
+  finished-on: Jun 2019
+  location: "M\xE1laga, Andaluc\xEDa, Espa\xF1a"
+  started-on: Jun 2018
+  title: Head of Data Science
+- company-name: Piksel Inc
+  description: 'Working in great team building an ecosystem of services based on Artificial
+    Intelligence using Python with diverse frameworks such as Django, Celery, Scrapy,
+    TensorFlow, Gensim... for solving multiple problems from different areas such
+    as image and video processing, including features and faces recognition; natural
+    language processing for text patterns recognition or text fuzzy matching.
+
+
+    Every service is built on top of latest available infrastructure using AWS services,
+    containerizing those services using Docker and Mesos/Marathon and applying continuous
+    integration and continuous deployment principles using Gitlab and GoCD pipelines.'
+  finished-on: May 2018
+  location: "M\xE1laga, Andaluc\xEDa, Espa\xF1a"
+  started-on: Jul 2016
+  title: Lead Developer
+- company-name: Ebury
+  description: Working on Business Intelligence area. Architecting, designing and
+    developing Big Data solutions for improving sales process, campaigns and feedback
+    with different Weak Artificial Intelligence techniques such as Fuzzy Logic Systems
+    and Artificial Neural Networks using Machine Learning over them.
+  finished-on: Jul 2016
+  location: "M\xE1laga, Andaluc\xEDa, Espa\xF1a"
+  started-on: Apr 2015
+  title: Lead Big Data Engineer
+- company-name: Ebury
+  description: 'I''m part of a team in charge of monitoring and improve services performance.
+    In order to improve our applications performance we, as team, need to have a wide
+    knowledge of the whole system and monitor it constantly so we research and develop
+    multiple tools for keeping the system healthy. This job includes refactoring of
+    big chunks of the applications along with redesing of some parts of it, for example
+    adding technologies such as cache layers or applying clustering to databases.
+
+
+    As part of the role we have to develop the needed tools to effectively measure
+    how the services behave, and one of the most relevant is to analyze, design and
+    built a proper performance test suite to let us benchmark our applications.'
+  finished-on: Jul 2016
+  location: "M\xE1laga, Andaluc\xEDa, Espa\xF1a"
+  started-on: Jul 2014
+  title: Web Backend Engineer
+- company-name: "Universidad de M\xE1laga"
+  description: Research about Algorithmic Musical Composition and Music Information
+    Retrieval with Fuzzy Logic systems.
+  finished-on: Mar 2014
+  location: "M\xE1laga, Andaluc\xEDa, Espa\xF1a"
+  started-on: Sep 2012
+  title: Research Scholarship
+- company-name: "Universidad de M\xE1laga"
+  description: ''
+  finished-on: '2013'
+  location: ''
+  started-on: '2006'
+  title: Computer Science Student
+publications:
+- description: An interactive introduction, oriented to testers, to how to verify
+    and validate services based on Machine Learning technologies.
+  name: Machine Learning services validation
+  published-on: Nov 2019
+  publisher: Test Academy
+  url: https://github.com/perdy/speech/tree/master/ml_services_validation_19-11
+- description: A framework based on python's asyncio module that allows to create
+    in fast and easy way an API.
+  name: High-performant asynchronous APIs
+  published-on: Sep 2019
+  publisher: PyCon
+  url: ''
+- description: How to create a new generation of APIs and frameworks taking advantage
+    of new tools from latest Python versions.
+  name: New Generation of APIs
+  published-on: Oct 2018
+  publisher: PyCon
+  url: https://github.com/PeRDy/speech/blob/master/new_generation_api_18-10/slides/Slides.pdf
+- description: Guide for creating an application or library from scratch, configure
+    it and distribute through PyPI.
+  name: Create, package and distribute your own Python application
+  published-on: Sep 2017
+  publisher: PyCon
+  url: https://github.com/PeRDy/speech/blob/master/create_package_and_distribute_17-09/slides/Slides.pdf
+- description: ' A mixed vision between traditional schemas in relational dabases
+    and schemaless NoSQL databases.'
+  name: Flex schemas with PostgreSQL
+  published-on: May 2017
+  publisher: OpenSouthCode
+  url: https://github.com/PeRDy/speech/blob/master/postgres_flex_schemas_05-05/slides/Slides.pdf
+- description: A complete guide about how to use Python's packaging and distributing
+    tools to ease the process of create a new application or library, package it and
+    distribute through repositories.
+  name: Packaging and Distributing
+  published-on: Apr 2017
+  publisher: " M\xE1laga Python MeetUp"
+  url: https://github.com/PeRDy/speech/blob/master/packaging_and_distributing_17-04/slides/Slides.pdf
+- description: Introduction to data analysis and representation using Python, Pandas
+    and some tools for data plotting.
+  name: Introduction to Data Analysis
+  published-on: Sep 2016
+  publisher: " M\xE1laga Python MeetUp"
+  url: https://github.com/PeRDy/speech/blob/master/introduction_data_analysis_16-09/slides/Slides.pdf
+skills:
+- name: Python (Programming Language)
+- name: Natural Language Processing (NLP)
+- name: Ciencia de datos
+- name: "Aprendizaje autom\xE1tico"
+- name: "An\xE1lisis de datos"
+- name: DevOps
+- name: JavaScript
+- name: "Integraci\xF3n continua"
+- name: Continuous Delivery
+- name: Arquitectura de software
+- name: Amazon Web Services (AWS)
+- name: Artificial Intelligence (AI)
+- name: Data Engineering
+- name: Data Analytics
+- name: Big Data
+- name: Software Development
+- name: Apache Kafka
+- name: Business Intelligence (BI)
+- name: Leadership
+- name: Data Warehousing
+- name: Django
+- name: SQL
+- name: Kubernetes
+- name: Apache Mesos

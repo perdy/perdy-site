@@ -3,7 +3,7 @@ import Project from 'components/Project';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
-export const Projects = () => {
+const ProjectsSection = () => {
   const {
     github: {
       viewer: {
@@ -41,7 +41,7 @@ export const Projects = () => {
     `
   );
   return (
-    <SimpleGrid columns={{ xs: 1, md: 2, lg: 3 }} spacing={{ xs: 4, lg: 10 }}>
+    <SimpleGrid columns={{ xs: 1, md: 2, xl: 3 }} spacing={{ xs: 4, lg: 10 }}>
       {edges.map(({ node }) => (
         <Project
           key={node.id}
@@ -56,3 +56,5 @@ export const Projects = () => {
     </SimpleGrid>
   );
 };
+
+export default ProjectsSection;

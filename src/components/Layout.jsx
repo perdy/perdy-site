@@ -1,18 +1,48 @@
 import { CSSReset, ThemeProvider } from '@chakra-ui/core';
 import { Global } from '@emotion/core';
 import Background from 'assets/images/background.jpg';
-import Section from 'components/Section';
+import ExperienceSection from 'components/ExperienceSection';
 import { Intro } from 'components/Intro';
-import { Projects } from 'components/Projects';
+import ProjectsSection from 'components/ProjectsSection';
+import Section from 'components/Section';
 import globalStyles from 'global';
 import useResponsive from 'hooks/responsive';
 import React from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import theme from 'theme';
 
-const PAGES = { xs: 4, sm: 4, md: 3, lg: 3, xl: 3 };
-const FACTOR_EXPERIENCE = { xs: 1, sm: 1, md: 1, lg: 1, xl: 1 };
-const FACTOR_PROJECTS = { xs: 1, sm: 1, md: 1, lg: 1, xl: 1 };
+const LAYOUT_FACTOR = {
+  xs: {
+    intro: { factor: 1, offset: 0 },
+    experience: { factor: 6, offset: 1 },
+    projects: { factor: 3, offset: 5 },
+    pages: 7
+  },
+  sm: {
+    intro: { factor: 1, offset: 0 },
+    experience: { factor: 6, offset: 1 },
+    projects: { factor: 3, offset: 5 },
+    pages: 7
+  },
+  md: {
+    intro: { factor: 1, offset: 0 },
+    experience: { factor: 3, offset: 1 },
+    projects: { factor: 1, offset: 3 },
+    pages: 4
+  },
+  lg: {
+    intro: { factor: 1, offset: 0 },
+    experience: { factor: 3, offset: 1 },
+    projects: { factor: 1, offset: 3 },
+    pages: 4
+  },
+  xl: {
+    intro: { factor: 1, offset: 0 },
+    experience: { factor: 3, offset: 1 },
+    projects: { factor: 1, offset: 3 },
+    pages: 4
+  }
+};
 
 const Layout = () => {
   const parallax = React.useRef();
@@ -22,24 +52,24 @@ const Layout = () => {
     <ThemeProvider theme={theme}>
       <CSSReset />
       <Global styles={globalStyles} />
-      <Parallax ref={parallax} pages={PAGES[responsive]}>
+      <Parallax ref={parallax} pages={LAYOUT_FACTOR[responsive].pages}>
+        {/* Background */}
         <ParallaxLayer
-          offset={1}
+          offset={LAYOUT_FACTOR[responsive].experience.offset}
+          factor={LAYOUT_FACTOR[responsive].experience.factor}
           speed={1}
-          factor={1}
           style={{ backgroundColor: theme.colors.primary['100'] }}
         />
         <ParallaxLayer
-          offset={2}
+          offset={LAYOUT_FACTOR[responsive].projects.offset}
+          factor={LAYOUT_FACTOR[responsive].projects.factor}
           speed={1}
-          factor={3}
           style={{ backgroundColor: theme.colors.secondary['100'] }}
         />
-
         <ParallaxLayer
           offset={0}
+          factor={LAYOUT_FACTOR[responsive].pages}
           speed={0}
-          factor={PAGES[responsive]}
           style={{
             opacity: 0.3,
             backgroundColor: theme.colors.gray['400'],
@@ -47,18 +77,37 @@ const Layout = () => {
             backgroundRepeat: 'repeat'
           }}
         />
-        <ParallaxLayer offset={0.25} speed={-0.1}>
+
+        {/* Intro */}
+        <ParallaxLayer
+          factor={LAYOUT_FACTOR[responsive].intro.factor - 0.25}
+          offset={LAYOUT_FACTOR[responsive].intro.offset + 0.25}
+          speed={-0.1}
+        >
           <Section>
             <Intro />
           </Section>
         </ParallaxLayer>
-        <ParallaxLayer offset={1.25} speed={0.5} factor={FACTOR_EXPERIENCE[responsive]}>
+
+        {/* Experience */}
+        <ParallaxLayer
+          offset={LAYOUT_FACTOR[responsive].experience.offset + 0.25}
+          factor={LAYOUT_FACTOR[responsive].experience.factor - 0.25}
+          speed={0.5}
+        >
           <Section title="Experience">
+            <ExperienceSection />
           </Section>
         </ParallaxLayer>
-        <ParallaxLayer offset={2.25} speed={0.5} factor={FACTOR_PROJECTS[responsive]}>
+
+        {/* Projects */}
+        <ParallaxLayer
+          offset={LAYOUT_FACTOR[responsive].projects.offset + 0.25}
+          factor={LAYOUT_FACTOR[responsive].projects.factor - 0.25}
+          speed={0.5}
+        >
           <Section title="Projects">
-            <Projects />
+            <ProjectsSection />
           </Section>
         </ParallaxLayer>
       </Parallax>
