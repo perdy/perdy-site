@@ -2,10 +2,12 @@ import { CSSReset, ThemeProvider } from '@chakra-ui/core';
 import { Global } from '@emotion/core';
 import Background from 'assets/images/background.jpg';
 import ExperienceSection from 'components/ExperienceSection';
+import HonorsSection from 'components/HonorsSection';
 import { Intro } from 'components/Intro';
 import ProjectsSection from 'components/ProjectsSection';
+import PublicationsSection from 'components/PublicationsSection';
 import Section from 'components/Section';
-import SkillsSection from 'components/SkillsSection'
+import SkillsSection from 'components/SkillsSection';
 import globalStyles from 'global';
 import useResponsive from 'hooks/responsive';
 import React from 'react';
@@ -17,36 +19,46 @@ const LAYOUT_FACTOR = {
     intro: { factor: 1, offset: 0 },
     projects: { factor: 3, offset: 1 },
     experience: { factor: 6, offset: 3 },
-    skills: {factor: 1, offset: 6},
-    pages: 7
+    honors: { factor: 1, offset: 7 },
+    publications: { factor: 1, offset: 8 },
+    skills: { factor: 1, offset: 9 },
+    pages: 10
   },
   sm: {
     intro: { factor: 1, offset: 0 },
     projects: { factor: 3, offset: 1 },
     experience: { factor: 6, offset: 3 },
-    skills: {factor: 1, offset: 6},
-    pages: 7
+    honors: { factor: 1, offset: 7 },
+    publications: { factor: 1, offset: 8 },
+    skills: { factor: 1, offset: 9 },
+    pages: 10
   },
   md: {
     intro: { factor: 1, offset: 0 },
-    projects: { factor: 1, offset: 1 },
-    experience: { factor: 3, offset: 2 },
-    skills: {factor: 1, offset: 4},
-    pages: 5
+    projects: { factor: 2, offset: 1 },
+    experience: { factor: 4, offset: 3 },
+    honors: { factor: 1, offset: 6 },
+    publications: { factor: 1, offset: 7 },
+    skills: { factor: 1, offset: 8 },
+    pages: 9
   },
   lg: {
     intro: { factor: 1, offset: 0 },
     projects: { factor: 1, offset: 1 },
-    experience: { factor: 3, offset: 2 },
-    skills: {factor: 1, offset: 4},
-    pages: 5
+    experience: { factor: 4, offset: 3 },
+    honors: { factor: 1, offset: 6 },
+    publications: { factor: 1, offset: 7 },
+    skills: { factor: 1, offset: 8 },
+    pages: 9
   },
   xl: {
     intro: { factor: 1, offset: 0 },
-    projects: { factor: 1, offset: 1 },
-    experience: { factor: 3, offset: 2 },
-    skills: {factor: 1, offset: 4},
-    pages: 5
+    projects: { factor: 2, offset: 1 },
+    experience: { factor: 4, offset: 3 },
+    honors: { factor: 1, offset: 6 },
+    publications: { factor: 1, offset: 7 },
+    skills: { factor: 1, offset: 8 },
+    pages: 9
   }
 };
 
@@ -114,6 +126,28 @@ const Layout = () => {
         >
           <Section title="Experience">
             <ExperienceSection />
+          </Section>
+        </ParallaxLayer>
+
+        {/* Honors */}
+        <ParallaxLayer
+          offset={LAYOUT_FACTOR[responsive].honors.offset + 0.25}
+          factor={LAYOUT_FACTOR[responsive].honors.factor - 0.25}
+          speed={0.5}
+        >
+          <Section title="Honors">
+            <HonorsSection />
+          </Section>
+        </ParallaxLayer>
+
+        {/* Publications */}
+        <ParallaxLayer
+          offset={LAYOUT_FACTOR[responsive].publications.offset + 0.25}
+          factor={LAYOUT_FACTOR[responsive].publications.factor - 0.25}
+          speed={0.5}
+        >
+          <Section title="Publications">
+            <PublicationsSection />
           </Section>
         </ParallaxLayer>
 

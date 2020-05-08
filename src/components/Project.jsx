@@ -17,7 +17,7 @@ const Project = ({ name, url, description, stars, forks, language }) => {
       mx="auto"
       w={{ xs: '2xs', sm: 'xs', lg: 'sm' }}
       borderColor="primary.400"
-      borderWidth="1px"
+      borderWidth={1}
       rounded="lg"
       overflow="hidden"
       bg="primary.200"

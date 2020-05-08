@@ -1,10 +1,10 @@
-import { SimpleGrid } from '@chakra-ui/core';
+import { Stack } from '@chakra-ui/core';
 import Experience from 'components/Experience';
 import data from 'data/linkedin.yaml';
 import React from 'react';
 
 const ExperienceSection = () => (
-  <SimpleGrid columns={1} spacing={{ xs: 4, lg: 10 }}>
+  <Stack spacing={{ xs: 4, lg: 10 }} align="center">
     {data.positions.map((node, i) => (
       <Experience
         key={`experience-${i}`}
@@ -16,7 +16,7 @@ const ExperienceSection = () => (
         location={node.location}
       />
     ))}
-  </SimpleGrid>
+  </Stack>
 );
 
 export default ExperienceSection;

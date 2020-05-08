@@ -1,8 +1,8 @@
 import { Box, useTheme } from '@chakra-ui/core';
 import data from 'data/linkedin.yaml';
-import useResponsive from 'hooks/responsive'
-import ReactWordcloud from 'react-wordcloud';
+import useResponsive from 'hooks/responsive';
 import React from 'react';
+import ReactWordcloud from 'react-wordcloud';
 
 const GROUPS = 5;
 const SKILLS = data.skills.map(({ name }, i) => {
@@ -11,7 +11,14 @@ const SKILLS = data.skills.map(({ name }, i) => {
     value: Math.ceil((GROUPS * (data.skills.length - i)) / data.skills.length)
   };
 });
-const FONT_SIZE = {xs: [18, 32], sm: [18, 32], md: [24, 48], lg: [32, 64], xl: [32, 64]};
+const FONT_SIZE = {
+  xs: [8, 16],
+  sm: [8, 16],
+  md: [16, 32],
+  lg: [32, 64],
+  xl: [32, 64]
+};
+const PADDING = { xs: 2, sm: 2, md: 5, lg: 10, xl: 10 };
 
 const SkillsSection = () => {
   const theme = useTheme();
@@ -31,10 +38,10 @@ const SkillsSection = () => {
             theme.colors.secondary['700']
           ],
           rotations: 0,
-          padding: 10,
+          padding: PADDING[responsive],
           enableTooltip: false,
           fontSizes: FONT_SIZE[responsive],
-          fontWeight: "700",
+          fontWeight: '700',
           fontFamily: theme.fonts.body,
           scale: 'sqrt',
           spiral: 'archimedean',
